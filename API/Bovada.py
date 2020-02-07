@@ -23,7 +23,7 @@ def bovadaBaseScraper(myurl, masterdata):
 	
 	try:
 		source = get(myurl, timeout=5, headers=h).json()
-	except Exception,e:
+	except Exception as e:
 		print(str(e))
 		print('Bovada connnetion error')
 		return
