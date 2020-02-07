@@ -25,7 +25,7 @@ def betPhoenixBaseScraper(myurl, masterdata):
 	try:
 		
 		source = get(myurl, timeout=5, headers=h)
-	except Exception,e:
+	except Exception as e:
 		print(str(e))
 		
 		print('BetPhoenix connnetion error')
