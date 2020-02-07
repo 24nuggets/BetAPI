@@ -38,5 +38,4 @@ urllib3==1.25.7
 user-agent==0.1.9
 websocket-client==0.56.0
 Werkzeug==0.16.0
-xattr==0.6.4
 zope.interface==4.1.1
