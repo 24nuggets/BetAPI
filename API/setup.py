@@ -6,6 +6,6 @@ setup(
    description='A useful module',
    author='Matt Capriotti',
    author_email='matthewcapriotti4@gmail.com',
-   packages=['BetAPI'],  #same as name
+   packages=['API'],  #same as name
    
 )
