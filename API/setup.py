@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-   name='BetAPI',
+   name='API',
    version='1.0',
    description='A useful module',
    author='Matt Capriotti',
