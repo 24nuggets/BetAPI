@@ -124,7 +124,7 @@ def intertopsBaseScraper(myurl, masterdata):
 	try:	
 		
 		r = get(myurl,timeout=5, headers=h)
-	except Exception,e:
+	except Exception as e:
 		print(str(e))
 		
 		print('Intertops connnetion error')
