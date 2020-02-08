@@ -32,8 +32,8 @@ def nfl():
 
 	p=Process(target=intertopsBaseScraper,args=(IntertopsBaseURLs,masterdata))
 	p.start()
-	p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
-	p1.start()
+	#p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
+	#p1.start()
 	p2=Process(target=bovadaBaseScraper,args=(bovadaAPIUrls,masterdata))
 	p2.start()
 	p3=Process(target=betPhoenixBaseScraper,args=(betPhoenixAPIUrls,masterdata))
@@ -48,7 +48,7 @@ def nfl():
 
 
 	p.join()
-	p1.join()
+	#p1.join()
 	p2.join()
 	p3.join()
 	p4.join()
@@ -69,8 +69,8 @@ def nba():
 
 	p=Process(target=intertopsBaseScraper,args=(IntertopsBaseURLs,masterdata))
 	p.start()
-	p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
-	p1.start()
+	#p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
+	#p1.start()
 	p2=Process(target=bovadaBaseScraper,args=(bovadaAPIUrls,masterdata))
 	p2.start()
 	p3=Process(target=betPhoenixBaseScraper,args=(betPhoenixAPIUrls,masterdata))
@@ -85,7 +85,7 @@ def nba():
 
 
 	p.join()
-	p1.join()
+	#p1.join()
 	p2.join()
 	p3.join()
 	p4.join()
@@ -108,8 +108,8 @@ def ncaab():
 
 	p=Process(target=intertopsBaseScraper,args=(IntertopsBaseURLs,masterdata))
 	p.start()
-	p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
-	p1.start()
+	#p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
+	#p1.start()
 	p2=Process(target=bovadaBaseScraper,args=(bovadaAPIUrls,masterdata))
 	p2.start()
 	p3=Process(target=betPhoenixBaseScraper,args=(betPhoenixAPIUrls,masterdata))
@@ -126,7 +126,7 @@ def ncaab():
 
 
 	p.join()
-	p1.join()
+	#p1.join()
 	p2.join()
 	p3.join()
 	p4.join()
@@ -149,8 +149,8 @@ def ufc():
 
 
 	
-	p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
-	p1.start()
+	#p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
+	#p1.start()
 	p2=Process(target=bovadaBaseScraper,args=(bovadaAPIUrls,masterdata))
 	p2.start()
 	p3=Process(target=betPhoenixBaseScraper,args=(betPhoenixAPIUrls,masterdata))
@@ -165,7 +165,7 @@ def ufc():
 
 
 	
-	p1.join()
+	#p1.join()
 	p2.join()
 	p3.join()
 	p4.join()
@@ -187,8 +187,8 @@ def boxing():
 
 
 	
-	p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
-	p1.start()
+	#p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
+	#p1.start()
 	p2=Process(target=bovadaBaseScraper,args=(bovadaAPIUrls,masterdata))
 	p2.start()
 	p3=Process(target=betPhoenixBaseScraper,args=(betPhoenixAPIUrls,masterdata))
@@ -203,7 +203,7 @@ def boxing():
 
 
 	
-	p1.join()
+	#p1.join()
 	p2.join()
 	p3.join()
 	p4.join()
@@ -225,8 +225,8 @@ def nhl():
 
 	p=Process(target=intertopsBaseScraper,args=(IntertopsBaseURLs,masterdata))
 	p.start()
-	p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
-	p1.start()
+	#p1=Process(target=sportBetBaseScraper,args=(SportBetReducedURLS,masterdata))
+	#p1.start()
 	p2=Process(target=bovadaBaseScraper,args=(bovadaAPIUrls,masterdata))
 	p2.start()
 	p3=Process(target=betPhoenixBaseScraper,args=(betPhoenixAPIUrls,masterdata))
@@ -241,7 +241,7 @@ def nhl():
 
 
 	p.join()
-	p1.join()
+	#p1.join()
 	p2.join()
 	p3.join()
 	p4.join()
