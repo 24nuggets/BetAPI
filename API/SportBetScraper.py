@@ -62,7 +62,7 @@ def sportBetBaseScraper(myurl, masterdata):
 			sport='fighting'
 			linetype='Match'
 		
-		sport=(unicode(sport).encode("utf-8"))
+		sport=(str(sport.encode("utf-8")))
 		j=0
 		
 		for entry in entries:
@@ -98,8 +98,8 @@ def sportBetBaseScraper(myurl, masterdata):
 				team2=team2[:-2]
 			team1=team1.lower()
 			team2=team2.lower()
-			team1=unicode(team1).encode('utf-8')
-			team2=unicode(team2).encode('utf-8')
+			team1=str(team1.encode('utf-8'))
+			team2=str(team2.encode('utf-8'))
 			lines1=line1.findAll('p',{'class':'betting-line'})
 			lines2=line2.findAll('p',{'class':'betting-line'})
 			
@@ -123,8 +123,8 @@ def sportBetBaseScraper(myurl, masterdata):
 					awayTeamPointLine=spread1Info[index1:]
 					homeTeamPointSpread=spread2Info[:index2]
 					homeTeamPointLine=spread2Info[index2:]
-					awayTeamPointSpread=unicode(awayTeamPointSpread)
-					homeTeamPointSpread=unicode(homeTeamPointSpread)
+					awayTeamPointSpread=str(awayTeamPointSpread.encode('utf-8'))
+					homeTeamPointSpread=str(homeTeamPointSpread.encode('utf-8'))
 					awayTeamPointSpread=awayTeamPointSpread.replace(u"½",u".5")
 					homeTeamPointSpread=homeTeamPointSpread.replace(u"½",u".5")
 					
@@ -154,13 +154,13 @@ def sportBetBaseScraper(myurl, masterdata):
 				if overInfo!=' ':
 					totalOverList=overInfo.split(' ')
 					over=totalOverList[1]
-					over=unicode(over)
+					over=str(over.encode('utf-8'))
 					over=over.replace(u"½",u".5")
 					overLine=totalOverList[2]
 					
 					totalUnderList=underInfo.split(' ')
 					under=totalUnderList[1]
-					under=unicode(under)
+					under=str(under.encode('utf-8'))
 					under=under.replace(u"½",u".5")
 					underLine=totalUnderList[2]
 					
