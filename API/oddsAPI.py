@@ -27,7 +27,7 @@ def nfl():
 	bovadaAPIUrls='https://services.bovada.lv/services/sports/event/coupon/events/A/description/football?marketFilterId=def&preMatchOnly=true&eventsLimit=50&lang=en'
 	betPhoenixAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111207169812656759593_1577303361038&hid=bdb01c9f736f2e641984fcde2fce11ad&cmd=games&leagues=1&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577303361039'
 	skyBookAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111206009097206260869_1577542998571&hid=e154acf7203ae1251e181abf8aca82a7&cmd=games&leagues=1&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577542998572'
-	SportBetReducedURLS='https://www.sportbet.com/lines/Football/Reduced/'
+	//SportBetReducedURLS='https://www.sportbet.com/lines/Football/Reduced/'
 
 
 	p=Process(target=intertopsBaseScraper,args=(IntertopsBaseURLs,masterdata))
@@ -64,7 +64,7 @@ def nba():
 	bovadaAPIUrls='https://services.bovada.lv/services/sports/event/coupon/events/A/description/basketball?marketFilterId=def&preMatchOnly=true&eventsLimit=50&lang=en'
 	betPhoenixAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111207169812656759593_1577303361038&hid=bdb01c9f736f2e641984fcde2fce11ad&cmd=games&leagues=3&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577303361039'
 	skyBookAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111206009097206260869_1577542998571&hid=e154acf7203ae1251e181abf8aca82a7&cmd=games&leagues=3&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577542998572'
-	SportBetReducedURLS='https://www.sportbet.com/lines/Basketball/Reduced/'
+	//SportBetReducedURLS='https://www.sportbet.com/lines/Basketball/Reduced/'
 
 
 	p=Process(target=intertopsBaseScraper,args=(IntertopsBaseURLs,masterdata))
@@ -101,7 +101,7 @@ def ncaab():
 	bovadaAPIUrls='https://services.bovada.lv/services/sports/event/coupon/events/A/description/basketball?marketFilterId=def&preMatchOnly=true&eventsLimit=50&lang=en'
 	betPhoenixAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111207169812656759593_1577303361038&hid=bdb01c9f736f2e641984fcde2fce11ad&cmd=games&leagues=4&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577303361039'
 	skyBookAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111206009097206260869_1577542998571&hid=e154acf7203ae1251e181abf8aca82a7&cmd=games&leagues=4&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577542998572'
-	SportBetReducedURLS='https://www.sportbet.com/lines/Basketball/Reduced/'
+	//SportBetReducedURLS='https://www.sportbet.com/lines/Basketball/Reduced/'
 	betPhoenixAPIUrls2='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111207169812656759593_1577303361038&hid=bdb01c9f736f2e641984fcde2fce11ad&cmd=games&leagues=741&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577303361039'
 	skyBookAPIUrls2='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111206009097206260869_1577542998571&hid=e154acf7203ae1251e181abf8aca82a7&cmd=games&leagues=741&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577542998572'
 	
@@ -145,7 +145,7 @@ def ufc():
 	bovadaAPIUrls='https://services.bovada.lv/services/sports/event/coupon/events/A/description/ufc-mma?marketFilterId=def&preMatchOnly=true&eventsLimit=50&lang=en'
 	betPhoenixAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111207169812656759593_1577303361038&hid=bdb01c9f736f2e641984fcde2fce11ad&cmd=games&leagues=32&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577303361039'
 	skyBookAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111206009097206260869_1577542998571&hid=e154acf7203ae1251e181abf8aca82a7&cmd=games&leagues=32&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577542998572'
-	SportBetReducedURLS='https://www.sportbet.com/lines/Fighting/Reduced/'
+	//SportBetReducedURLS='https://www.sportbet.com/lines/Fighting/Reduced/'
 
 
 	
@@ -183,7 +183,7 @@ def boxing():
 	bovadaAPIUrls='https://services.bovada.lv/services/sports/event/coupon/events/A/description/boxing?marketFilterId=def&preMatchOnly=true&eventsLimit=50&lang=en'
 	betPhoenixAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111207169812656759593_1577303361038&hid=bdb01c9f736f2e641984fcde2fce11ad&cmd=games&leagues=10&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577303361039'
 	skyBookAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111206009097206260869_1577542998571&hid=e154acf7203ae1251e181abf8aca82a7&cmd=games&leagues=10&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577542998572'
-	SportBetReducedURLS='https://www.sportbet.com/lines/Fighting/Reduced/'
+	//SportBetReducedURLS='https://www.sportbet.com/lines/Fighting/Reduced/'
 
 
 	
@@ -220,7 +220,7 @@ def nhl():
 	bovadaAPIUrls='https://services.bovada.lv/services/sports/event/coupon/events/A/description/hockey?marketFilterId=def&preMatchOnly=true&eventsLimit=50&lang=en'
 	betPhoenixAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111207169812656759593_1577303361038&hid=bdb01c9f736f2e641984fcde2fce11ad&cmd=games&leagues=7&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577303361039'
 	skyBookAPIUrls='https://api.securecashiersystem.ag/js/Lines.js?jsoncallback=jQuery111206009097206260869_1577542998571&hid=e154acf7203ae1251e181abf8aca82a7&cmd=games&leagues=7&nhlLine=A&mblLine=A&lineStyle=E&language=0&_=1577542998572'
-	SportBetReducedURLS='https://www.sportbet.com/lines/Hockey/Reduced/'
+	//SportBetReducedURLS='https://www.sportbet.com/lines/Hockey/Reduced/'
 
 
 	p=Process(target=intertopsBaseScraper,args=(IntertopsBaseURLs,masterdata))
