@@ -55,7 +55,7 @@ def skyBookBaseScraper(myurl, masterdata):
 			sport="fighting"
 		sport=sport.lower()
 		
-		sport=(unicode(sport).encode("utf-8"))
+		sport=(str(sport.encode("utf-8")))
 		linetype=game['gpd']
 		if linetype=="GAME":
 			linetype="Match"
@@ -85,8 +85,8 @@ def skyBookBaseScraper(myurl, masterdata):
 			team_1=team_1[3:]
 		team_1=team_1.lower()
 		team_2=team_2.lower()
-		team_1=unicode(team_1).encode("utf-8")
-		team_2=unicode(team_2).encode("utf-8")	
+		team_1=str(team_1.encode("utf-8"))
+		team_2=str(team_2.encode("utf-8"))	
 		matchup={}
 		for line in lines:
 			try:
