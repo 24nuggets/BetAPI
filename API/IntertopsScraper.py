@@ -42,8 +42,8 @@ def IntertopsQuartersHalfsGames(table, linetype, masterdata,sport):
 			team1=team1.replace('-',' ')
 			team1=team1.lower()
 			team2=team2.lower()
-			team1=str(team1).encode('utf-8')
-			team2=str(team2).encode('utf-8')
+			team1=unicode(team1).encode('utf-8')
+			team2=unicode(team2).encode('utf-8')
 			matchup["HomeTeam"]=team2
 			matchup["AwayTeam"]=team1
 			matchup["Sport"]=sport
@@ -166,7 +166,7 @@ def intertopsBaseScraper(myurl, masterdata):
 			sport='basketball'
 		elif code=='1064':
 			sport='hockey'
-		sport=(str(sport).encode("utf-8"))
+		sport=(unicode(sport).encode("utf-8"))
 		for panel in Panels:
 			name=panel.find('span',{'class':'title-string'})
 			names.append(name.text.strip())
