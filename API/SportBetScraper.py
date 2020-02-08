@@ -25,7 +25,7 @@ def sportBetBaseScraper(myurl, masterdata):
 
 	try:	
 		
-		r = get(myurl, timeout=5, headers=h, verify=False)
+		r = get(myurl, timeout=5, headers=h)
 	except Exception as e:
 		print(str(e))
 		
