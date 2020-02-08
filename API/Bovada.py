@@ -37,7 +37,7 @@ def bovadaBaseScraper(myurl, masterdata):
 		
 		sport=data['path'][1]['description']
 		sport=sport.lower()
-		sport=(str(sport).encode("utf-8"))
+		sport=(unicode(sport).encode("utf-8"))
 		for team in data['events']:
 			matchup={}
 			try:
@@ -60,8 +60,8 @@ def bovadaBaseScraper(myurl, masterdata):
 				team_2=team_2.strip()
 				team_1=team_1.lower()
 				team_2=team_2.lower()
-				team_1=str(team_1).encode("utf-8")
-				team_2=str(team_2).encode("utf-8")
+				team_1=unicode(team_1).encode("utf-8")
+				team_2=unicode(team_2).encode("utf-8")
 				
 				linetype=team['displayGroups'][0]['markets'][0]['period']['description']
 				try: 
