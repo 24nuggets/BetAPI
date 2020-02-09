@@ -55,7 +55,7 @@ def nfl():
 	output=json.dumps(dict(masterdata))
 	return output
 
-@app.route('/api/v1/resources/nba', methods=['GET'])
+@app.route('/api/v1/resources/nba/spreads', methods=['GET'])
 def nba():
 	league='nba'
 	manager=Manager()
@@ -89,7 +89,21 @@ def nba():
 	p2.join()
 	p3.join()
 	p4.join()
-	output=json.dumps(dict(masterdata))
+	spreadData=[]
+	for key in masterdata:
+		entry={}
+		entry['Match']=key
+		i=0
+		for key1 in masterdata[key]:
+			i=i+1
+			entry["AwayPointSpread"+str(i)]=key1['AwayTeamPointSpread']
+			entry["AwayPointLine"+str(i)]=key1['AwayTeamPointLine']
+			entry["HomePointSpread"+str(i)]=key1['HomeTeamPointSpread']
+			entry["HomePointLine"+str(i)]=key1['HomeTeamPointLine']
+		spreadData.append(entry)
+			
+		
+	output=json.dumps(dict(spreadData))
 	return output
 
 @app.route('/api/v1/resources/ncaab', methods=['GET'])
