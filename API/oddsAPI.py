@@ -102,8 +102,8 @@ def nba():
 			entry["HomePointLine"+str(i)]=key1['HomeTeamPointLine']
 		spreadData.append(entry)
 			
-		
-	output=json.dumps(dict(spreadData))
+	print(spreadData)	
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/ncaab', methods=['GET'])
