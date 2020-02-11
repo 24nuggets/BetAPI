@@ -92,8 +92,8 @@ def nba():
 	spreadData=[]
 	for key in masterdata:
 		entry={}
-		entry['AwayTeam']=masterdata[key]['AwayTeam']
-		entry['HomeTeam']=masterdata[key]['HomeTeam']
+		entry['AwayTeam']=masterdata[key][0]['AwayTeam']
+		entry['HomeTeam']=masterdata[key][0]['HomeTeam']
 		i=0
 		for key1 in masterdata[key]:
 			i=i+1
