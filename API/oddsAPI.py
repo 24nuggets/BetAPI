@@ -92,6 +92,8 @@ def nba():
 	spreadData=[]
 	for key in masterdata:
 		entry={}
+		if len(masterdata[key]<2:
+		       continue
 		entry['AwayTeam']=masterdata[key][0]['AwayTeam']
 		entry['HomeTeam']=masterdata[key][0]['HomeTeam']
 		i=0
