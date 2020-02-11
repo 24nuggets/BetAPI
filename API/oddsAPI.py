@@ -92,14 +92,15 @@ def nba():
 	spreadData=[]
 	for key in masterdata:
 		entry={}
-		entry['Match']=key
+		entry['AwayTeam']=masterdata[key]['AwayTeam']
+		entry['HomeTeam']=masterdata[key]['HomeTeam']
 		i=0
 		for key1 in masterdata[key]:
 			i=i+1
 			entry["AwayPointSpread"+str(i)]=key1['AwayTeamPointSpread']
-			entry["AwayPointLine"+str(i)]=key1['AwayTeamPointLine']
+			entry["AwayPointLine"+str(i)]=round(float(key1['AwayTeamPointLine']),2)
 			entry["HomePointSpread"+str(i)]=key1['HomeTeamPointSpread']
-			entry["HomePointLine"+str(i)]=key1['HomeTeamPointLine']
+			entry["HomePointLine"+str(i)]=round(float(key1['HomeTeamPointLine']),2)
 		spreadData.append(entry)
 			
 	print(spreadData)	
