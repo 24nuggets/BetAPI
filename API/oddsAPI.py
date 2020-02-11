@@ -55,7 +55,7 @@ def nfl():
 	output=json.dumps(dict(masterdata))
 	return output
 
-@app.route('/api/v1/resources/nba/spreads', methods=['GET'])
+@app.route('/api/v1/resources/nba/spreads/decimal', methods=['GET'])
 def nba():
 	league='nba'
 	manager=Manager()
@@ -92,7 +92,7 @@ def nba():
 	spreadData=[]
 	for key in masterdata:
 		entry={}
-		if len(masterdata[key]<2:
+		if len(masterdata[key])<2:
 		       continue
 		entry['AwayTeam']=masterdata[key][0]['AwayTeam']
 		entry['HomeTeam']=masterdata[key][0]['HomeTeam']
