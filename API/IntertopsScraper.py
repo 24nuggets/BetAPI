@@ -62,36 +62,42 @@ def IntertopsQuartersHalfsGames(table, linetype, masterdata,sport):
 			if i<4:
 				x=point.get('data-o-pts')
 				y=point.get('data-o-inv')
+				z=point.get('data-o-cnt')
 				if i==0:
 					if x !=None:
 						#SpreadTeam.append('')
 						
 						matchup["AwayTeamPointSpread"]=x
 						matchup["AwayTeamPointLine"]=y
+						matchup["AwayTeamPointLineAmerican"]=z
 				elif i==1:
 					if x !=None:
 					
 						matchup["HomeTeamPointSpread"]= x
 						matchup["HomeTeamPointLine"]=y
+						matchup["HomeTeamPointLineAmerican"]=z
 				elif i==2:
 					if x !=None:
 						
 						matchup["OverPoints"]=x
 						matchup["OverLine"]=y
+						matchup["OverLineAmerican"]=z
 				elif i==3:
 					if x !=None:
 						
 						matchup["UnderPoints"]=x
 						matchup["UnderLine"]=y
+						matchup["UnderLineAmerican"]=z
 			else:
 				x=point.get('data-o-inv')
+				z=point.get('data-o-cnt')
 				if i==4:
 					if x !=None:
-						
+						matchup["AwayTeamMoneyLineAmerican"]=z
 						matchup["AwayTeamMoneyLine"]=x
 				elif i==5:
 					if x !=None:
-					
+						matchup["HomeTeamMoneyLineAmerican"]=z
 						matchup["HomeTeamMoneyLine"]=x
 			
 			i=i+1
