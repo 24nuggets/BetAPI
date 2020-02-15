@@ -56,7 +56,7 @@ def nfl():
 	return output
 
 @app.route('/api/v1/resources/nba/match/spreads/american', methods=['GET'])
-def nba():
+def nbaSpreadAmerican():
 	league='nba'
 	manager=Manager()
 	masterdata=manager.dict()
@@ -111,7 +111,7 @@ def nba():
 	return output
 
 @app.route('/api/v1/resources/nba/match/spreads/decimal', methods=['GET'])
-def nba():
+def nbaSpreadDecimal():
 	league='nba'
 	manager=Manager()
 	masterdata=manager.dict()
