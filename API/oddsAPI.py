@@ -100,9 +100,9 @@ def nbaSpreadAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpreadAmerican']
+				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
 				entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLineAmerican']),2)
-				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpreadAmerican']
+				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
 				entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLineAmerican']),2)
 		spreadData.append(entry)
 			
