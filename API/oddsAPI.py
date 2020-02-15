@@ -94,8 +94,8 @@ def nba():
 		entry={}
 		if len(masterdata[key])<2:
 		       continue
-		entry['AwayTeam']=masterdata[key][0]['AwayTeam'].decode("utf-8").title()
-		entry['HomeTeam']=masterdata[key][0]['HomeTeam'].decode("utf-8").title()
+		entry['AwayTeam']=masterdata[key][0]['AwayTeam'][2:-1].title()
+		entry['HomeTeam']=masterdata[key][0]['HomeTeam'][2:-1].title()
 		
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
