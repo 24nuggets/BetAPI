@@ -71,10 +71,14 @@ def bovadaBaseScraper(myurl, masterdata):
 				try: 
 					odd_1_2 = team['displayGroups'][0]['markets'][0]['outcomes'][0]['price']['decimal'] 
 					matchup["AwayTeamPointLine"]=odd_1_2
+					odd_1_2 = team['displayGroups'][0]['markets'][0]['outcomes'][0]['price']['american']
+					matchup["AwayTeamPointLineAmerican"]=odd_1_2
 				except KeyError: pass
 				try: 
 					moneyline1=team['displayGroups'][0]['markets'][1]['outcomes'][0]['price']['decimal']
 					matchup["AwayTeamMoneyLine"]=moneyline1
+					moneyline1=team['displayGroups'][0]['markets'][1]['outcomes'][0]['price']['american']
+					matchup["AwayTeamMoneyLineAmerican"]=moneyline1
 				except KeyError: pass
 				try: 
 					over=team['displayGroups'][0]['markets'][2]['outcomes'][0]['price']['handicap'] 
@@ -83,6 +87,8 @@ def bovadaBaseScraper(myurl, masterdata):
 				try: 
 					overline=team['displayGroups'][0]['markets'][2]['outcomes'][0]['price']['decimal'] 
 					matchup["OverLine"]=overline
+					overline=team['displayGroups'][0]['markets'][2]['outcomes'][0]['price']['american']
+					matchup["OverLineAmerican"]=overline
 				except KeyError: pass
 				try:
 					odd_2_1 = team['displayGroups'][0]['markets'][0]['outcomes'][1]['price']['handicap'] 
@@ -91,10 +97,14 @@ def bovadaBaseScraper(myurl, masterdata):
 				try: 
 					odd_2_2 = team['displayGroups'][0]['markets'][0]['outcomes'][1]['price']['decimal'] 
 					matchup["HomeTeamPointLine"]=odd_2_2
+					odd_2_2 = team['displayGroups'][0]['markets'][0]['outcomes'][1]['price']['american'] 
+					matchup["HomeTeamPointLineAmerican"]=odd_2_2
 				except KeyError: pass
 				try: 
 					moneyline2=team['displayGroups'][0]['markets'][1]['outcomes'][1]['price']['decimal']
 					matchup["HomeTeamMoneyLine"]=moneyline2
+					moneyline2=team['displayGroups'][0]['markets'][1]['outcomes'][1]['price']['american']
+					matchup["HomeTeamMoneyLineAmerican"]=moneyline2
 				except KeyError: pass
 				try: 
 					under=team['displayGroups'][0]['markets'][2]['outcomes'][1]['price']['handicap'] 
@@ -103,6 +113,8 @@ def bovadaBaseScraper(myurl, masterdata):
 				try:
 					underline=team['displayGroups'][0]['markets'][2]['outcomes'][1]['price']['decimal'] 
 					matchup["UnderLine"]=underline
+					underline=team['displayGroups'][0]['markets'][2]['outcomes'][1]['price']['american']
+					matchup["UnderLineAmerican"]=underline
 				except KeyError: pass
 				if linetype=="Second Half":
 					linetype="2nd Half"
