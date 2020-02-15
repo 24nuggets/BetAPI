@@ -55,7 +55,7 @@ def nfl():
 	output=json.dumps(dict(masterdata))
 	return output
 
-@app.route('/api/v1/resources/nba/spreads/decimal', methods=['GET'])
+@app.route('/api/v1/resources/nba/match/spreads/decimal', methods=['GET'])
 def nba():
 	league='nba'
 	manager=Manager()
@@ -94,15 +94,16 @@ def nba():
 		entry={}
 		if len(masterdata[key])<2:
 		       continue
-		entry['AwayTeam']=masterdata[key][0]['AwayTeam']
-		entry['HomeTeam']=masterdata[key][0]['HomeTeam']
-		i=0
+		entry['AwayTeam']=masterdata[key][0]['AwayTeam'].decode("utf-8").title()
+		entry['HomeTeam']=masterdata[key][0]['HomeTeam'].decode("utf-8").title()
+		
 		for key1 in masterdata[key]:
-			i=i+1
-			entry["AwayPointSpread"+str(i)]=key1['AwayTeamPointSpread']
-			entry["AwayPointLine"+str(i)]=round(float(key1['AwayTeamPointLine']),2)
-			entry["HomePointSpread"+str(i)]=key1['HomeTeamPointSpread']
-			entry["HomePointLine"+str(i)]=round(float(key1['HomeTeamPointLine']),2)
+			if key1['LineType']=="Match":
+				bookName=key1['SportsBook']
+				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
+				entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLine']),2)
+				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
+				entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLine']),2)
 		spreadData.append(entry)
 			
 	print(spreadData)	
