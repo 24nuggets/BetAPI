@@ -287,9 +287,9 @@ def nflSpreadAmerican():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLineAmerican']),2)
+				entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
 				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLineAmerican']),2)
+				entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
 		spreadData.append(entry)
 			
 		
@@ -397,9 +397,9 @@ def nbaSpreadAmerican():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLineAmerican']),2)
+				entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
 				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLineAmerican']),2)
+				entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
 		spreadData.append(entry)
 			
 		
@@ -509,9 +509,9 @@ def nbaMoneyLineDecimal():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLine']
+				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
 				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLine']
+				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
 		spreadData.append(entry)
 			
 		
@@ -620,9 +620,9 @@ def nbaTotalsDecimal():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=key1['OverLine']
+				entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
 				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=key1['UnderLine']
+				entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
 		spreadData.append(entry)
 			
 		
@@ -736,9 +736,9 @@ def ncaabTotalsDecimal():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=key1['OverLine']
+				entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
 				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=key1['UnderLine']
+				entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -854,9 +854,9 @@ def ncaabMoneyLineDecimal():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLine']
+				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
 				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLine']
+				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -973,9 +973,9 @@ def ncaabSpreadAmerican():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLineAmerican']),2)
+				entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
 				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLineAmerican']),2)
+				entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1139,9 +1139,9 @@ def ufcMoneyLineDecimal():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLine']
+				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
 				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLine']
+				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1245,9 +1245,9 @@ def boxingMoneyLineDecimal():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLine']
+				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
 				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLine']
+				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1354,9 +1354,9 @@ def nhlSpreadAmerican():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLineAmerican']),2)
+				entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
 				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLineAmerican']),2)
+				entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1408,9 +1408,9 @@ def nhlMoneyLineDecimal():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLine']
+				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
 				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLine']
+				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1570,9 +1570,9 @@ def nhlTotalsDecimal():
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
 				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=key1['OverLine']
+				entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
 				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=key1['UnderLine']
+				entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
