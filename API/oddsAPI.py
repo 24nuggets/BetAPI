@@ -62,10 +62,12 @@ def nflTotalsAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=key1['OverLineAmerican']
-				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=key1['UnderLineAmerican']
+				try:
+					entry[bookName+"OverPoints"]=key1['OverPoints']
+					entry[bookName+"OverLine"]=key1['OverLineAmerican']
+					entry[bookName+"UnderPoints"]=key1['UnderPoints']
+					entry[bookName+"UnderLine"]=key1['UnderLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 			
 		
@@ -118,10 +120,12 @@ def nflTotalsDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
-				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
+				try:
+					entry[bookName+"OverPoints"]=key1['OverPoints']
+					entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
+					entry[bookName+"UnderPoints"]=key1['UnderPoints']
+					entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
+				except KeyError:pass
 		spreadData.append(entry)
 			
 		
@@ -174,10 +178,11 @@ def nflMoneyLineDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
-				
-				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
+
+					entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				except KeyError:pass
 		spreadData.append(entry)
 			
 		
@@ -230,10 +235,11 @@ def nflMoneyLineAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
-				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
+
+					entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 			
 		
@@ -286,10 +292,12 @@ def nflSpreadAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
-				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
+				try:
+					entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
+					entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
+					entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
+					entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 			
 		
@@ -341,10 +349,12 @@ def nflSpreadDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLine']),2)
-				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLine']),2)
+				try:
+					entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
+					entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLine']),2)
+					entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
+					entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLine']),2)
+				except KeyError:pass
 		spreadData.append(entry)
 			
 		
@@ -396,10 +406,12 @@ def nbaSpreadAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
-				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
+				try:
+					entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
+					entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
+					entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
+					entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 			
 		
@@ -453,10 +465,11 @@ def nbaMoneyLineAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
-				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
+
+					entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				except KeyError:pass
 		spreadData.append(entry)
 			
 		
@@ -508,10 +521,11 @@ def nbaMoneyLineDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
-				
-				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
+
+					entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				except KeyError:pass
 		spreadData.append(entry)
 			
 		
@@ -564,10 +578,12 @@ def nbaTotalsAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=key1['OverLineAmerican']
-				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=key1['UnderLineAmerican']
+				try:
+					entry[bookName+"OverPoints"]=key1['OverPoints']
+					entry[bookName+"OverLine"]=key1['OverLineAmerican']
+					entry[bookName+"UnderPoints"]=key1['UnderPoints']
+					entry[bookName+"UnderLine"]=key1['UnderLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 			
 		
@@ -619,10 +635,12 @@ def nbaTotalsDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
-				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
+				try:
+					entry[bookName+"OverPoints"]=key1['OverPoints']
+					entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
+					entry[bookName+"UnderPoints"]=key1['UnderPoints']
+					entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
+				except KeyError: pass
 		spreadData.append(entry)
 			
 		
@@ -674,10 +692,12 @@ def nbaSpreadDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLine']),2)
-				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLine']),2)
+				try:
+					entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
+					entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLine']),2)
+					entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
+					entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLine']),2)
+				except KeyError: pass
 		spreadData.append(entry)
 			
 		
@@ -735,10 +755,12 @@ def ncaabTotalsDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
-				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
+				try:
+					entry[bookName+"OverPoints"]=key1['OverPoints']
+					entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
+					entry[bookName+"UnderPoints"]=key1['UnderPoints']
+					entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
+				except KeyError: pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -794,10 +816,11 @@ def ncaabMoneyLineAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
-				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
+
+					entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				except KeyError:pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -853,10 +876,11 @@ def ncaabMoneyLineDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
-				
-				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
+
+					entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				except KeyError: pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -912,10 +936,12 @@ def ncaabTotalsAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=key1['OverLineAmerican']
-				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=key1['UnderLineAmerican']
+				try:
+					entry[bookName+"OverPoints"]=key1['OverPoints']
+					entry[bookName+"OverLine"]=key1['OverLineAmerican']
+					entry[bookName+"UnderPoints"]=key1['UnderPoints']
+					entry[bookName+"UnderLine"]=key1['UnderLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -972,10 +998,12 @@ def ncaabSpreadAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
-				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
+				try:
+					entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
+					entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
+					entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
+					entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1031,10 +1059,12 @@ def ncaabSpreadDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLine']),2)
-				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLine']),2)
+				try:
+					entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
+					entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLine']),2)
+					entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
+					entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLine']),2)
+				except KeyError: pass
 		spreadData.append(entry)
 		
 	output=json.dumps(dict(masterdata))
@@ -1085,10 +1115,11 @@ def ufcMoneyLineAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
-				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
+
+					entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				except KeyError:pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1138,10 +1169,11 @@ def ufcMoneyLineDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
-				
-				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
+
+					entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				except KeyError:pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1191,10 +1223,11 @@ def boxingMoneyLineAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
-				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
+
+					entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1244,10 +1277,11 @@ def boxingMoneyLineDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
-				
-				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
+
+					entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				except KeyError:pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1298,10 +1332,12 @@ def nhlSpreadDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLine']),2)
-				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLine']),2)
+				try:
+					entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
+					entry[bookName+"AwayPointLine"]=round(float(key1['AwayTeamPointLine']),2)
+					entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
+					entry[bookName+"HomePointLine"]=round(float(key1['HomeTeamPointLine']),2)
+				except KeyError: pass
 		spreadData.append(entry)
 	
 	output=json.dumps(dict(masterdata))
@@ -1353,10 +1389,12 @@ def nhlSpreadAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
-				entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
-				entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
-				entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
+				try:
+					entry[bookName+"AwayPointSpread"]=key1['AwayTeamPointSpread']
+					entry[bookName+"AwayPointLine"]=key1['AwayTeamPointLineAmerican']
+					entry[bookName+"HomePointSpread"]=key1['HomeTeamPointSpread']
+					entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1407,10 +1445,11 @@ def nhlMoneyLineDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
-				
-				entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=round(float(key1['AwayTeamMoneyLine']),2)
+
+					entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
+				except KeyError: pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1461,10 +1500,11 @@ def nhlMoneyLineAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				
-				entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
-				
-				entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				try:
+					entry[bookName+"AwayTeamMoneyLine"]=key1['AwayTeamMoneyLineAmerican']
+
+					entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1515,10 +1555,12 @@ def nhlTotalsAmerican():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=key1['OverLineAmerican']
-				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=key1['UnderLineAmerican']
+				try:
+					entry[bookName+"OverPoints"]=key1['OverPoints']
+					entry[bookName+"OverLine"]=key1['OverLineAmerican']
+					entry[bookName+"UnderPoints"]=key1['UnderPoints']
+					entry[bookName+"UnderLine"]=key1['UnderLineAmerican']
+				except KeyError: pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
@@ -1569,10 +1611,12 @@ def nhlTotalsDecimal():
 		for key1 in masterdata[key]:
 			if key1['LineType']=="Match":
 				bookName=key1['SportsBook']
-				entry[bookName+"OverPoints"]=key1['OverPoints']
-				entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
-				entry[bookName+"UnderPoints"]=key1['UnderPoints']
-				entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
+				try:
+					entry[bookName+"OverPoints"]=key1['OverPoints']
+					entry[bookName+"OverLine"]=round(float(key1['OverLine']),2)
+					entry[bookName+"UnderPoints"]=key1['UnderPoints']
+					entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
+				except KeyError: pass
 		spreadData.append(entry)
 	output=json.dumps(dict(masterdata))
 	return output
