@@ -743,7 +743,7 @@ def ncaabTotalsDecimal():
 	output=json.dumps(dict(masterdata))
 	return output
 
-@app.route('/api/v1/resources/ncaab/match/totals/american', methods=['GET'])
+@app.route('/api/v1/resources/ncaab/match/moneyline/american', methods=['GET'])
 def ncaabMoneyLineAmerican():
 	league='ncaab'
 	manager=Manager()
@@ -802,7 +802,7 @@ def ncaabMoneyLineAmerican():
 	output=json.dumps(dict(masterdata))
 	return output
 
-@app.route('/api/v1/resources/ncaab/match/totals/decimal', methods=['GET'])
+@app.route('/api/v1/resources/ncaab/match/moneyline/decimal', methods=['GET'])
 def ncaabMoneyLineDecimal():
 	league='ncaab'
 	manager=Manager()
