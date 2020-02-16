@@ -71,7 +71,7 @@ def nflTotalsAmerican():
 		spreadData.append(entry)
 			
 		
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nfl/match/totals/decimal', methods=['GET'])
@@ -129,7 +129,7 @@ def nflTotalsDecimal():
 		spreadData.append(entry)
 			
 		
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nfl/match/moneyline/decimal', methods=['GET'])
@@ -186,7 +186,7 @@ def nflMoneyLineDecimal():
 		spreadData.append(entry)
 			
 		
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nfl/match/moneyline/american', methods=['GET'])
@@ -243,7 +243,7 @@ def nflMoneyLineAmerican():
 		spreadData.append(entry)
 			
 		
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nfl/match/spreads/american', methods=['GET'])
@@ -301,7 +301,7 @@ def nflSpreadAmerican():
 		spreadData.append(entry)
 			
 		
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 @app.route('/api/v1/resources/nfl/match/spreads/decimal', methods=['GET'])
 def nflSpreadDecimal():	
@@ -358,7 +358,7 @@ def nflSpreadDecimal():
 		spreadData.append(entry)
 			
 		
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nba/match/spreads/american', methods=['GET'])
@@ -762,7 +762,7 @@ def ncaabTotalsDecimal():
 					entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
 				except KeyError: pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/ncaab/match/moneyline/american', methods=['GET'])
@@ -822,7 +822,7 @@ def ncaabMoneyLineAmerican():
 					entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
 				except KeyError:pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/ncaab/match/moneyline/decimal', methods=['GET'])
@@ -882,7 +882,7 @@ def ncaabMoneyLineDecimal():
 					entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
 				except KeyError: pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/ncaab/match/totals/american', methods=['GET'])
@@ -943,7 +943,8 @@ def ncaabTotalsAmerican():
 					entry[bookName+"UnderLine"]=key1['UnderLineAmerican']
 				except KeyError: pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+		
+	output=json.dumps(spreadData)
 	return output
 
 
@@ -1005,7 +1006,7 @@ def ncaabSpreadAmerican():
 					entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
 				except KeyError: pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/ncaab/match/spreads/decimal', methods=['GET'])
@@ -1067,7 +1068,7 @@ def ncaabSpreadDecimal():
 				except KeyError: pass
 		spreadData.append(entry)
 		
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/ufc/match/moneyline/american', methods=['GET'])
@@ -1121,7 +1122,7 @@ def ufcMoneyLineAmerican():
 					entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
 				except KeyError:pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/ufc/match/moneyline/decimal', methods=['GET'])
@@ -1175,7 +1176,7 @@ def ufcMoneyLineDecimal():
 					entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
 				except KeyError:pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/boxing/match/moneyline/american', methods=['GET'])
@@ -1229,7 +1230,7 @@ def boxingMoneyLineAmerican():
 					entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
 				except KeyError: pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/boxing/match/moneyline/decimal', methods=['GET'])
@@ -1283,7 +1284,7 @@ def boxingMoneyLineDecimal():
 					entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
 				except KeyError:pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nhl/match/spreads/decimal', methods=['GET'])
@@ -1340,7 +1341,7 @@ def nhlSpreadDecimal():
 				except KeyError: pass
 		spreadData.append(entry)
 	
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nhl/match/spreads/american', methods=['GET'])
@@ -1396,7 +1397,7 @@ def nhlSpreadAmerican():
 					entry[bookName+"HomePointLine"]=key1['HomeTeamPointLineAmerican']
 				except KeyError: pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nhl/match/moneyline/decimal', methods=['GET'])
@@ -1451,7 +1452,7 @@ def nhlMoneyLineDecimal():
 					entry[bookName+"HomeTeamMoneyLine"]=round(float(key1['HomeTeamMoneyLine']),2)
 				except KeyError: pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nhl/match/moneyline/american', methods=['GET'])
@@ -1506,7 +1507,7 @@ def nhlMoneyLineAmerican():
 					entry[bookName+"HomeTeamMoneyLine"]=key1['HomeTeamMoneyLineAmerican']
 				except KeyError: pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nhl/match/totals/american', methods=['GET'])
@@ -1562,7 +1563,7 @@ def nhlTotalsAmerican():
 					entry[bookName+"UnderLine"]=key1['UnderLineAmerican']
 				except KeyError: pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 @app.route('/api/v1/resources/nhl/match/totals/decimal', methods=['GET'])
@@ -1618,7 +1619,7 @@ def nhlTotalsDecimal():
 					entry[bookName+"UnderLine"]=round(float(key1['UnderLine']),2)
 				except KeyError: pass
 		spreadData.append(entry)
-	output=json.dumps(dict(masterdata))
+	output=json.dumps(spreadData)
 	return output
 
 if __name__ == '__main__':
