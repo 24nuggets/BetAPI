@@ -118,6 +118,8 @@ def betPhoenixBaseScraper(myurl, masterdata):
 				except KeyError: pass
 				try: 
 					overline=line['ovoddst']
+					if overline>0 :
+						overline="+"+str(overline)
 					matchup["OverLineAmerican"]=overline
 					overline=ConvertAmericanOddsToDecimal(overline)
 					matchup["OverLine"]=overline
@@ -128,12 +130,16 @@ def betPhoenixBaseScraper(myurl, masterdata):
 				except KeyError: pass
 				try: 
 					odd_2_2 = line['hsprdoddst']
+					if odd_2_2>0 :
+						odd_2_2="+"+str(odd_2_2)
 					matchup["HomeTeamPointLineAmerican"]=odd_2_2
 					odd_2_2=ConvertAmericanOddsToDecimal(odd_2_2)
 					matchup["HomeTeamPointLine"]=odd_2_2
 				except KeyError: pass
 				try: 
 					moneyline2=line['hoddst']
+					if moneyline2>0 :
+						moneyline2="+"+str(moneyline2)
 					matchup["HomeTeamMoneyLineAmerican"]=moneyline2
 					moneyline2=ConvertAmericanOddsToDecimal(moneyline2)
 					matchup["HomeTeamMoneyLine"]=moneyline2
@@ -144,6 +150,8 @@ def betPhoenixBaseScraper(myurl, masterdata):
 				except KeyError: pass
 				try: 
 					underline=line['unoddst']
+					if underline>0 :
+						underline="+"+str(underline)
 					matchup["UnderLineAmerican"]=underline
 					underline=ConvertAmericanOddsToDecimal(underline)
 					matchup["UnderLine"]=underline
