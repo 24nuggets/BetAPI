@@ -94,8 +94,7 @@ def IntertopsQuartersHalfsGames(table, linetype, masterdata,sport):
 						matchup["UnderLineAmerican"]=z
 			else:
 				x=point.get('data-o-inv')
-				point2=point.find('span',{'class','fright odds'})
-				z=point2.get('data-o-cnt')
+				
 				if i==4:
 					if x !=None:
 						point2=point.find('span',{'class','odds'})
