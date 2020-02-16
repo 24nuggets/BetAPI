@@ -62,30 +62,33 @@ def IntertopsQuartersHalfsGames(table, linetype, masterdata,sport):
 			if i<4:
 				x=point.get('data-o-pts')
 				y=point.get('data-o-inv')
-				point2=point.find('span',{'class','fright odds'})
-				z=point2.get('data-o-cnt')
+				
 				if i==0:
 					if x !=None:
 						#SpreadTeam.append('')
-						
+						point2=point.find('span',{'class','fright odds'})
+						z=point2['data-o-cnt']
 						matchup["AwayTeamPointSpread"]=x
 						matchup["AwayTeamPointLine"]=y
 						matchup["AwayTeamPointLineAmerican"]=z
 				elif i==1:
 					if x !=None:
-					
+						point2=point.find('span',{'class','fright odds'})
+						z=point2['data-o-cnt']
 						matchup["HomeTeamPointSpread"]= x
 						matchup["HomeTeamPointLine"]=y
 						matchup["HomeTeamPointLineAmerican"]=z
 				elif i==2:
 					if x !=None:
-						
+						point2=point.find('span',{'class','fright odds'})
+						z=point2['data-o-cnt']
 						matchup["OverPoints"]=x
 						matchup["OverLine"]=y
 						matchup["OverLineAmerican"]=z
 				elif i==3:
 					if x !=None:
-						
+						point2=point.find('span',{'class','fright odds'})
+						z=point2['data-o-cnt']
 						matchup["UnderPoints"]=x
 						matchup["UnderLine"]=y
 						matchup["UnderLineAmerican"]=z
@@ -95,10 +98,14 @@ def IntertopsQuartersHalfsGames(table, linetype, masterdata,sport):
 				z=point2.get('data-o-cnt')
 				if i==4:
 					if x !=None:
+						point2=point.find('span',{'class','odds'})
+						z=point2['data-o-cnt']
 						matchup["AwayTeamMoneyLineAmerican"]=z
 						matchup["AwayTeamMoneyLine"]=x
 				elif i==5:
 					if x !=None:
+						point2=point.find('span',{'class','odds'})
+						z=point2['data-o-cnt']
 						matchup["HomeTeamMoneyLineAmerican"]=z
 						matchup["HomeTeamMoneyLine"]=x
 			
