@@ -98,8 +98,8 @@ def betPhoenixBaseScraper(myurl, masterdata):
 				except KeyError: pass
 				try: 
 					odd_1_2 = line['vsprdoddst']
-					if odd_1_2[0] != '-' :
-						odd_1_2="+"+odd_1_2
+					if odd_1_2>0 :
+						odd_1_2="+"+str(odd_1_2)
 					matchup["AwayTeamPointLineAmerican"]=odd_1_2
 					odd_1_2=ConvertAmericanOddsToDecimal(odd_1_2)
 					matchup["AwayTeamPointLine"]=odd_1_2
