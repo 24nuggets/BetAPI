@@ -106,6 +106,8 @@ def betPhoenixBaseScraper(myurl, masterdata):
 				except KeyError: pass
 				try: 
 					moneyline1=line['voddst']
+					if moneyline1>0 :
+						moneyline1="+"+str(moneyline1)
 					matchup["AwayTeamMoneyLineAmerican"]=moneyline1
 					moneyline1=ConvertAmericanOddsToDecimal(moneyline1)
 					matchup["AwayTeamMoneyLine"]=moneyline1
