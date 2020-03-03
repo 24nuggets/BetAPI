@@ -1216,8 +1216,8 @@ def boxingMoneyLineAmerican():
 	spreadData=[]
 	for key in masterdata:
 		entry={}
-		if len(masterdata[key])<2:
-		       continue
+		#if len(masterdata[key])<2:
+		#       continue
 		entry['AwayTeam']=masterdata[key][0]['AwayTeam'][2:-1].title()
 		entry['HomeTeam']=masterdata[key][0]['HomeTeam'][2:-1].title()
 		
