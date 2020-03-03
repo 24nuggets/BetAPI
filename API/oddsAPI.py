@@ -1213,7 +1213,7 @@ def boxingMoneyLineAmerican():
 	p2.join()
 	p3.join()
 	p4.join()
-	return masterdata
+	return json.dumps(masterdata)
 	spreadData=[]
 	for key in masterdata:
 		entry={}
