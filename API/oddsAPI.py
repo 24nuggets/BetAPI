@@ -1213,12 +1213,12 @@ def boxingMoneyLineAmerican():
 	p2.join()
 	p3.join()
 	p4.join()
-	return json.dumps(dict(masterdata))
+	
 	spreadData=[]
 	for key in masterdata:
 		entry={}
-		#if len(masterdata[key])<2:
-		#       continue
+		if len(masterdata[key])<2:
+		       continue
 		entry['AwayTeam']=masterdata[key][0]['AwayTeam'][2:-1].title()
 		entry['HomeTeam']=masterdata[key][0]['HomeTeam'][2:-1].title()
 		
