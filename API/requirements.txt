@@ -13,7 +13,7 @@ free-proxy==1.0.0
 gunicorn==19.10.0
 idna==2.8
 itsdangerous==1.1.0
-Jinja2==2.10.3
+Jinja2==2.11.3
 lxml==4.4.2
 macholib==1.5.1
 MarkupSafe==1.1.1
